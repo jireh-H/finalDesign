@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>精细化报表</title>
+    {% load static %}
+    <!-- Bootstrap Styles-->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="{% static 'js/morris/morris-0.4.3.min.css' %}" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="{% static 'css/custom-styles.css' %}" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index"><strong>福溢粥饼 </strong></a>
+            </div>
+        </nav>
+        <!-- 导航栏 -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a  href="index">首页</a>
+                    </li>
+                    <li>
+                        <a href="menu">菜谱管理</a>
+                    </li>
+                    <li>
+                        <a href="order1"> 已处理订单管理</a>
+                    </li>
+                    <li>
+                        <a href="order2"> 未处理订单管理</a>
+                    </li>
+                    <li>
+                        <a href="member"> 用户管理</a>
+                    </li>
+                    <li>
+                        <a href="statistical" class="active-menu"> 精细化报表</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner" >
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form" action="/backstage/statistical" method="post" >
+                                        {% csrf_token %}
+                                        <div class="form-group ">
+                                            <label>选择想要查询的月份</label>
+                                            <select class="form-control" name="month">
+                                                <option>请选择</option>
+                                                <option value="1">1月</option>
+                                                <option value="2">2月</option>
+                                                <option value="3">3月</option>
+                                                <option value="4">4月</option>
+                                                <option value="5">5月</option>
+                                                <option value="6">6月</option>
+                                                <option value="7">7月</option>
+                                                <option value="8">8月</option>
+                                                <option value="9">9月</option>
+                                                <option value="10">10月</option>
+                                                <option value="11">11月</option>
+                                                <option value="12">12月</option>
+                                            </select>
+                                            <label>当月销售额为</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">￥</span>
+                                                 <input class="form-control" name="month_statistic" disabled value="{{ month_statistic }}">
+                                                <span class="input-group-addon">.00</span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-default">提交</button>
+                                        <button type="reset" class="btn btn-default">重新输入</button>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <link href="{% static '/js/jquery-1.10.2.js' %}" rel="stylesheet" />
+    <!-- Bootstrap Js -->
+    <link href="{% static 'js/bootstrap.min.js' %}" rel="stylesheet" />
+    <!-- Metis Menu Js -->
+    <link href="{% static 'js/jquery.metisMenu' %}" rel="stylesheet" />
+    <!-- Morris Chart Js -->
+    <link href="{% static 'js/morris/raphael-2.1.0.min.js' %}" rel="stylesheet" />
+    <link href="{% static 'js/morris/morris.js' %}" rel="stylesheet" />
+
+
+    <link href="{% static 'js/easypiechart.js' %}" rel="stylesheet" />
+    <link href="{% static 'js/easypiechart-data.js' %}" rel="stylesheet" />
+
+
+    <!-- Custom Js -->
+    <link href="{% static 'js/custom-scripts.js' %}" rel="stylesheet" />
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!--pages/sign/sign.wxml-->
+<view class="sign">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="input">
+    <view class="input_text">请输入手机号：</view>      
+    <input name="sign_phone"></input>
+    </view>
+    <button formType="submit">注册为会员</button>
+  </form>
+</view>

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/menu/menu",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/goods_detail/goods_detail",
+    "pages/pay/pay",
+    "pages/order/order",
+    "pages/sign/sign",
+    "pages/orderinfo/orderinfo",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF0000",
+    "navigationBarTitleText": "福溢粥饼"
+  },
+  "tabBar": {
+    "color": "#818181",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "点餐",
+        "iconPath": "/assets/tabbar/category.png",
+        "selectedIconPath": "/assets/tabbar/category_active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/assets/tabbar/cart.png",
+        "selectedIconPath": "/assets/tabbar/cart_active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "/assets/tabbar/order.jpg",
+        "selectedIconPath": "/assets/tabbar/order_active.jpg"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/assets/tabbar/profile.png",
+        "selectedIconPath": "/assets/tabbar/profile_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

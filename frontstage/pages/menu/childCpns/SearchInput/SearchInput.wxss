@@ -1,0 +1,15 @@
+/* pages/menu/childCpns/Searchinput/Searchinput.wxss */
+.search_input {
+  height: 90rpx;
+  padding: 10rpx;
+  background-color: var(--themeColor);
+}
+.search_input navigator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #666;
+  height: 100%;
+  border-radius: 15rpx;
+}

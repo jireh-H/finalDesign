@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>更改会员信息</title>
+    {% load static %}
+    <!-- Bootstrap Styles-->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="{% static 'js/morris/morris-0.4.3.min.css' %}" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="{% static 'css/custom-styles.css' %}" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index"><strong>福溢粥饼 </strong></a>
+            </div>
+        </nav>
+        <!-- 导航栏 -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a  href="index">首页</a>
+                    </li>
+                    <li>
+                        <a href="menu">菜谱管理</a>
+                    </li>
+                    <li>
+                        <a href="order1"> 已处理订单管理</a>
+                    </li>
+                    <li>
+                        <a href="order2"> 未处理订单管理</a>
+                    </li>
+                    <li>
+                        <a href="member"> 用户管理</a>
+                    </li>
+                    <li>
+                        <a href="statistical"> 精细化报表</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner" >
+
+            
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            更改用户信息
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form" action="/backstage/finishi_updatamember" method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="form-group ">
+                                            <input class="form-control" type="hidden"  value="{{ member.id }}"
+                                                   name="member_id">
+                                            <label>用户昵称</label>
+                                            <input class="form-control"   value="{{ member.member_name }}" disabled name="member_name">
+                                            <label>用户头像</label><br>
+                                            <img src="{{ member.photo }}"><br>
+                                            <label>用户手机号</label>
+                                            <input class="form-control"   value="{{ member.phone }}" disabled name="member_name">
+                                            <label>用户积分</label>
+                                            <input class="form-control" value="{{ member.member_integral }}" name="integral">
+                                            <label>是否为VIP</label>
+                                            <input class="form-control" value="{{ member.isVIP }}" name="isVIP">
+                                        </div>      
+                                        <button type="submit" class="btn btn-default">提交</button>
+                                        <button type="reset" class="btn btn-default">重新输入</button>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>	
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <link href="{% static '/js/jquery-1.10.2.js' %}" rel="stylesheet" />
+    <!-- Bootstrap Js -->
+    <link href="{% static 'js/bootstrap.min.js' %}" rel="stylesheet" />
+    <!-- Metis Menu Js -->
+    <link href="{% static 'js/jquery.metisMenu' %}" rel="stylesheet" />
+    <!-- Morris Chart Js -->
+    <link href="{% static 'js/morris/raphael-2.1.0.min.js' %}" rel="stylesheet" />
+    <link href="{% static 'js/morris/morris.js' %}" rel="stylesheet" />
+
+
+    <link href="{% static 'js/easypiechart.js' %}" rel="stylesheet" />
+    <link href="{% static 'js/easypiechart-data.js' %}" rel="stylesheet" />
+
+
+    <!-- Custom Js -->
+    <link href="{% static 'js/custom-scripts.js' %}" rel="stylesheet" />
+
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<!--pages/pay/pay.wxml-->
+<view class="content">
+  <view class="pay_text">
+    <text>由于小程序官方的权限问题，不能调用小程序的支付api，如需支付请扫描下方二维码</text>
+  </view>
+  <view class="pay_img">
+    <image mode="widthFix" src="/assets/pay.jpg"></image>
+  </view>
+  <view class="pay_btn">
+    <button bindtap="handleOrderPay">确认支付</button>
+  </view>
+</view>

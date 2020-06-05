@@ -1,0 +1,19 @@
+/* pages/sign/sign.wxss */
+.sign .input {
+  margin-top: 35%;
+}
+.sign .input .input_text {
+  margin-left: 20rpx;
+  font-size: 50rpx;
+}
+.sign .input input {
+  padding-left: 20rpx;
+  margin-top: 40rpx;
+  margin-left: 8%;
+  width: 80%;
+  border: 2rpx solid red;
+  border-radius: 10rpx;
+}
+.sign button {
+  margin-top: 50rpx;
+}

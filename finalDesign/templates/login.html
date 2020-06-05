@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+	 {% load static %}
+<script type="application/x-javascript">
+	addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+</script>
+<!-- font files  -->
+
+<!-- css files -->
+	<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all" />
+<!-- /css files -->
+</head>
+<body>
+<h1>欢迎登录福溢粥饼后台管理系统</h1>
+<div class="log">
+	<div class="content1" style="margin-left:300px">
+		<h2>登 录</h2>
+		<form method="post" action="/backstage/login2">
+			{% csrf_token %}
+			<input
+					style="width:400px"
+					type="text" name="userid"
+					value="请输入用户名"
+					onfocus="this.value = '';"
+					onblur="if (this.value == '') {this.value = 'USERNAME';}">
+			<input
+					style="width:400px"
+					type="password" name="psw"
+					onfocus="this.value = '';"
+					onblur="if (this.value == '') {this.value = 'PASSWORD';}">
+			<div class="button-row">
+				<input type="submit" class="sign-in" value="登录">
+				<input type="reset" class="reset" value="重新输入">
+				<div class="clear"></div>
+			</div>
+		</form>
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+</body>
+</html>

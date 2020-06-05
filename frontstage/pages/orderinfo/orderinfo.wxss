@@ -1,0 +1,56 @@
+/* pages/orderinfo/orderinfo.wxss */
+.order_container .order_info {
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+  color: #666;
+}
+.order_container .order_info .order_no_row {
+  display: flex;
+  padding: 10rpx;
+  justify-content: space-between;
+}
+.order_container .order_info .order_price {
+  display: flex;
+  padding: 10rpx;
+  justify-content: space-between;
+}
+.order_container .order_info .order_price .order_price_value {
+  color: red;
+  font-size: 32rpx;
+}
+.order_container .foods_info {
+  width: 100%;
+}
+.order_container .foods_info .food_info {
+  margin: 20rpx;
+  display: flex;
+  border-bottom: 1px solid #B4B4B6;
+}
+.order_container .foods_info .food_info .food_img {
+  flex: 2;
+}
+.order_container .foods_info .food_info .food_img img {
+  width: 60%;
+}
+.order_container .foods_info .food_info .food_text_info {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 50rpx;
+}
+.order_container .foods_info .food_info .food_text_info .food_name {
+  font-size: 40rpx;
+}
+.order_container .foods_info .food_info .food_text_info .text_wrap {
+  display: flex;
+}
+.order_container .foods_info .food_info .food_text_info .text_wrap .food_price {
+  flex: 1;
+  color: red;
+  font-size: 35rpx;
+}
+.order_container .foods_info .food_info .food_text_info .text_wrap .food_num {
+  flex: 1;
+  font-size: 35rpx;
+}

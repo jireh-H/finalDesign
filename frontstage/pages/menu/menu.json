@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "SearchInput": "./childCpns/SearchInput/SearchInput"
+  }
+}

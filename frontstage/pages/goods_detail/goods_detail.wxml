@@ -1,0 +1,29 @@
+<!--pages/goods_detail/goods_detail.wxml-->
+<view class="detail_picture">
+  <image mode="widthFix" src="{{ goodsObj.picture }}"></image>
+</view>
+
+<view class="goods_price">￥{{goodsObj.price}}</view>
+
+<view class="goods_name_row">
+  <view class="goods_name">{{goodsObj.name}}</view>
+</view>
+<view class="btm_tool">
+  <view class="tool_item">
+    <view class="iconfont icon-kefu"></view>
+    <view>客服</view>
+    <button open-type="contact" ></button>
+  </view>
+  <view class="tool_item">
+    <view class="iconfont icon-fenxiang"></view>
+    <view>分享</view>
+    <button open-type="share" ></button>
+  </view>
+  <navigator class="tool_item" url="/pages/cart/cart" open-type="switchTab">
+    <view class="iconfont icon-gou_wu_che2"></view>
+    <view>购物车</view>
+  </navigator>
+  <view class="tool_item btn_cart" bindtap="handleCartAdd">
+    加入购物车
+  </view>
+</view>

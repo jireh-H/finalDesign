@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>已处理订单管理</title>
+    {% load static %}
+    <!-- Bootstrap Styles-->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="{% static 'js/morris/morris-0.4.3.min.css' %}" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="{% static 'css/custom-styles.css' %}" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index"><strong>福溢粥饼 </strong></a>
+            </div>
+        </nav>
+        <!-- 导航栏 -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a  href="index">首页</a>
+                    </li>
+                    <li>
+                        <a href="menu">菜谱管理</a>
+                    </li>
+                    <li>
+                        <a href="order1"> 已处理订单管理</a>
+                    </li>
+                    <li>
+                        <a href="order2"> 未处理订单管理</a>
+                    </li>
+                    <li>
+                        <a href="member"> 用户管理</a>
+                    </li>
+                    <li>
+                        <a href="statistical"> 精细化报表</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner" >
+
+
+                <div class="row">
+                <div class="col-md-6" style="width:1220px">
+                  <!--   Kitchen Sink -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            菜品列表
+                        </div>
+                        <div class="panel-body" >
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" >
+                                    <thead>
+                                        <tr>
+                                            <th>菜品id</th>
+                                            <th>菜品名称</th>
+                                            <th>菜品图片</th>
+                                            <th>菜品数量</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for i in list %}
+                                        <tr>
+                                            <td>{{ i.id }}</td>
+                                            <td>{{ i.menu_name }}</td>
+                                            <td>
+                                                <img src="{{ i.picture }}" mode="withFix" style="width:70px;height:60px;">
+                                            </td>
+                                            <td>{{ i.food_num }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                        <div class="panel-heading">
+                            <a href="javascript:history.go(-1);">返回订单列表</a>
+                        </div>
+                    </div>
+                     <!-- End  Kitchen Sink -->
+                </div>
+
+            </div>
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <link href="{% static '/js/jquery-1.10.2.js' %}" rel="stylesheet" />
+    <!-- Bootstrap Js -->
+    <link href="{% static 'js/bootstrap.min.js' %}" rel="stylesheet" />
+    <!-- Metis Menu Js -->
+    <link href="{% static 'js/jquery.metisMenu' %}" rel="stylesheet" />
+    <!-- Morris Chart Js -->
+    <link href="{% static 'js/morris/raphael-2.1.0.min.js' %}" rel="stylesheet" />
+    <link href="{% static 'js/morris/morris.js' %}" rel="stylesheet" />
+
+
+    <link href="{% static 'js/easypiechart.js' %}" rel="stylesheet" />
+    <link href="{% static 'js/easypiechart-data.js' %}" rel="stylesheet" />
+
+
+    <!-- Custom Js -->
+    <link href="{% static 'js/custom-scripts.js' %}" rel="stylesheet" />
+
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!--pages/orderinfo/orderinfo.wxml-->
+<view class="order_container">
+  <view class="order_info" wx:for='{{ orderObj }}'>
+    <view class="order_no_row">
+      <text>桌位号：</text>
+      <text>{{ item.table }}</text>
+    </view>
+    <view class="order_no_row">
+      <text>服务人员编号：</text>
+      <text>{{ item.server }}</text>
+    </view>
+    <view class="order_price">
+      <text>订单价格</text>
+      <text class="order_price_value">{{ item.totleprice }}</text>
+    </view>
+    <view class="order_no_row">
+      <text>下单时间:</text>
+      <text>{{ item.time }}</text>
+    </view>
+  </view>
+  <view class="foods_info">
+    <view class="food_info" wx:for="{{ ordersObj }}">
+      <view class="food_img">
+         <image mode="widthFix"  src="{{ item.picture }}"></image> 
+      </view>
+      <view class="food_text_info">
+        <view class="food_name">{{ item.menu_name }}</view>
+        <view class="text_wrap">
+          <view class="food_price">￥{{ item.price }}</view>
+          <view class="food_num">x{{ item.food_num }}</view>
+        </view>        
+      </view>
+      
+    </view>
+  </view>
+</view>

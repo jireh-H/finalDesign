@@ -1,0 +1,59 @@
+/* pages/orderinfo/orderinfo.wxss */
+.order_container{
+    .order_info{
+        padding: 20rpx;
+        border-bottom: 1px solid #ccc;
+        color: #666;
+        .order_no_row{
+            display: flex;
+            padding: 10rpx;
+            justify-content: space-between;
+        }
+        .order_price{
+            display: flex;
+            padding: 10rpx;
+            justify-content: space-between;
+            .order_price_value{
+                color: red;
+                font-size: 32rpx;
+            }
+        }
+    }
+    .foods_info{
+        width: 100%;                
+        .food_info{
+            margin: 20rpx;
+            display: flex;
+            border-bottom: 1px solid #B4B4B6;            
+            .food_img{
+                flex: 2;                
+                img{
+                    width: 60%;
+                }
+            }
+            .food_text_info{
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding-left: 50rpx;
+                .food_name{
+                    font-size: 40rpx;
+                }
+                .text_wrap{
+                    display: flex;
+                    .food_price{
+                        flex: 1;
+                        color: red;
+                        font-size: 35rpx;
+                    }
+                    .food_num{
+                        flex: 1;
+                        font-size: 35rpx;
+                    }
+                }
+                
+            }
+        }
+    }
+}

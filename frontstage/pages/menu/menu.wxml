@@ -1,0 +1,42 @@
+<!--pages/menu/menu.wxml-->
+<view class="cates">
+  <SearchInput></SearchInput>
+  <view class="cates_container">
+    <!-- 左侧菜单 -->
+    <scroll-view class="left_menu" scroll-y >
+      <view class="menu_item {{index===currentIndex?'active':''}}"
+            wx:for="{{leftMenuList}}"
+            wx:key="*this"
+            bindtap="handleItemTap"
+            data-index="{{index}}">
+        {{item}}
+      </view>
+    </scroll-view>
+    <!-- 右侧商品内容 -->
+    <scroll-view class="right_content" scroll-y scroll-top = "{{scroll_top}}" >
+      <view 
+            class="goods_item"
+            wx:for="{{rightContent}}" 
+            wx:for-index="index" 
+            wx:for-item="item">
+        <!-- 左侧图片容器 -->
+        <view class="goods_img_wrap">
+          <image mode="widthFix" src="{{ item.picture }}" ></image>
+        </view>
+        <!-- 右侧商品容器 -->
+        <view class="goods_info_wrap">
+          <view class="goods_name" >{{ item.menu_name }}</view>
+          <view class="goods_info">
+            <view class="goods_price" >￥{{ item.menu_price }}</view>
+            <view class="goods_integral" >积分：{{ item.menu_integral }}</view>
+            <navigator url="/pages/goods_detail/goods_detail?id={{ item.id }}"
+                  class="goods_purchase" 
+                  data-id="{{ item.id }}" 
+                  data-price="{{ item.menu_price }}" 
+                  data-name="{{ item.menu_name }}">加入订单</navigator>
+          </view>
+        </view>
+      </view>      
+    </scroll-view>
+  </view>
+</view> 
